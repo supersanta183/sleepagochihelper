@@ -16,12 +16,10 @@ import images from "../images.js"
         sleepPower: 
 */
 export const ElementItems = (props) =>{
-    console.log(props)
     const [item, setItem] = useState(props.item)
     const [stateButton1,setbutton1] = useState(false)
     const [stateButton2,setbutton2] = useState(false)
     const [stateButton3,setbutton3] = useState(false)
-    const name = props.item.name
 
     function setInitiallyClicked(){
         if(item.level==1){
@@ -58,6 +56,7 @@ export const ElementItems = (props) =>{
     useEffect(() => {
         setInitiallyClicked()
     })
+    const names = props.item.name
 
 
     return (
@@ -70,7 +69,7 @@ export const ElementItems = (props) =>{
             </div>
 
             <div className="imgClasswrapper">
-                <img className="imgClass" src={images['name']} alt="starter" />
+                <img className="imgClass" src={images[names]} alt="starter" />
             </div>
 
             <div className="statsWrapper">

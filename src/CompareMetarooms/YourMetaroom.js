@@ -1,15 +1,13 @@
 import React from "react";
 import { ElementItems } from "./ElementItems";
 import Dropdown from "./Dropdown";
-import tempCommonItemNames from "../Backend/Utilities/Constants.mjs";
-//import commonItemNames from "../Backend/Utilities/Constants"
+import { itemNames } from "../Backend/Utilities/Constants";
 import { levelOneItemStats } from "../Backend/Utilities/itemStats";
-const commonItemNames = {Starter: "Starter", Student: "Student", Comfy: "Comfy", WoodenCabinet: "WoodenCabinet", Shelving: "Shelving", VintageBookshelf: "VintageBookshelf", CozyBed: "CozyBed", Mattress: "Mattress", TwinSize: "TwinSize", TropicalRug: "TropicalRug", PatternRug: "PatternRug", RetroRug: "RetroRug", Waves: "Waves", FramedPlants: "FramedPlants", Sunset:"Sunset"}
 
 const options =[]
 
-for(let i = 0; i<commonItemNames.length;i++){
-    options.push(levelOneItemStats[commonItemNames[i]])
+for(let i = 0; i<itemNames.length;i++){
+    options.push(levelOneItemStats[itemNames[i]])
 }
 
 
@@ -21,16 +19,16 @@ const YouMetaroom = (props) =>{
             <Dropdown item={props.metaroom.Setting} options={options}/>
         </div>
         <div className="itemWrapper">
-            <Dropdown item={props.metaroom.Storage} options={options}/>
+            <ElementItems item={props.metaroom.Storage}/>
         </div>
         <div className="itemWrapper">
-            <Dropdown item={props.metaroom.Bed} options={options}/>
+            <ElementItems item={props.metaroom.Bed}/>
         </div>
         <div className="itemWrapper">
-            <Dropdown item={props.metaroom.Rug} options={options}/>
+            <ElementItems item={props.metaroom.Rug}/>
         </div>
         <div className="itemWrapper">
-            <Dropdown item={props.metaroom.Poster} options={options}/>
+            <ElementItems item={props.metaroom.Poster}/>
         </div>
         </div>
     )
