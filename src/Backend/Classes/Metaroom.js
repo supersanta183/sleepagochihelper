@@ -15,7 +15,7 @@ export class metaroom{
     #luck
     #combo
     #cleanReadiness
-    constructor(setting = levelOneItemStats.Student, storage= levelOneItemStats.Shelving, 
+    constructor(setting = levelOneItemStats.Starter, storage= levelOneItemStats.Shelving, 
         bed = levelOneItemStats.CozyBed, rug = levelOneItemStats.PatternRug, poster = levelOneItemStats.FramedPlants){
         if(setting.type == types.Setting && storage.type == types.Storage && bed.type == types.Bed && rug.type == types.Rug && poster.type == types.Poster){
         this.#setting = setting
@@ -69,6 +69,22 @@ export class metaroom{
 
     getCombo(){
         return this.#combo
+    }
+
+    getSetting(){
+        return this.#setting
+    }
+    getStorage(){
+        return this.#storage
+    }
+    getBed(){
+        return this.#bed
+    }
+    getRug(){
+        return this.#rug
+    }
+    getPoster(){
+        return this.#poster
     }
 
     updateItem(newItem){

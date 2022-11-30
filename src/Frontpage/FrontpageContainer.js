@@ -4,19 +4,19 @@ import FrontpageImage from "./FrontpageImage.js";
 import SubHeader from "./Subheader.js"
 import ItemlistButton from "./ItemlistButton.js";
 import "./Frontpage.css"
+import CompareMetarooms from "./CompareRoomsButton.js";
 
 class FrontpageContainer extends React.Component{
-
     render() {
         return (
             <div className="wrapper">
                 <Header />
                 <FrontpageImage />
                 <SubHeader />
+                <CompareMetarooms/>
                 <ItemlistButton/>
             </div>
         )   
     }
-
 }
 export default FrontpageContainer

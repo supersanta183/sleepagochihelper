@@ -7,7 +7,7 @@ import { getLeagueBonus } from '../Utilities/HelperFunctions.js'
 import { levelOneItemStats, levelThreeItemStats, levelTwoItemStats } from "../Utilities/itemStats.js"
 import { Errors } from '../Utilities/Errors.js'
 
-class user {
+export class user {
     #id = 0
     #metaroom = new metaroom(levelOneItemStats.Student,levelOneItemStats.Shelving,levelOneItemStats.CozyBed,levelOneItemStats.PatternRug, levelOneItemStats.FramedPlants)
     #league = ""
@@ -69,14 +69,29 @@ class user {
     getCombo(){
         return this.#combo.toFixed(2)
     }
+    getSetting(){
+        return this.#metaroom.getSetting()
+    }
+    getStorage(){
+        return this.#metaroom.getStorage()
+    }
+    getBed(){
+        return this.#metaroom.getBed()
+    }
+    getRug(){
+        return this.#metaroom.getRug()
+    }
+    getPoster(){
+        return this.#metaroom.getPoster()
+    }
 }
 
-let Bjarke = new user("Ham", new metaroom(), leagues.Challenger)
-Bjarke.swapItemInMetaroom(levelThreeItemStats.VintageBookshelf)
-Bjarke.swapItemInMetaroom(levelThreeItemStats.Sunset)
-Bjarke.swapItemInMetaroom(levelThreeItemStats.Mattress)
-Bjarke.swapItemInMetaroom(levelThreeItemStats.Comfy)
-Bjarke.swapItemInMetaroom(levelThreeItemStats.RetroRug)
-console.log("Total power: " + Bjarke.getExpectedIncome())
-console.log(Bjarke.getCombo())
-console.log(Bjarke.getMetaroom().getRawPower())
+//let Bjarke = new user("Ham", new metaroom(), leagues.Challenger)
+//Bjarke.swapItemInMetaroom(levelThreeItemStats.VintageBookshelf)
+//Bjarke.swapItemInMetaroom(levelThreeItemStats.Sunset)
+//Bjarke.swapItemInMetaroom(levelThreeItemStats.Mattress)
+//Bjarke.swapItemInMetaroom(levelThreeItemStats.Comfy)
+//Bjarke.swapItemInMetaroom(levelThreeItemStats.RetroRug)
+//console.log("Total power: " + Bjarke.getExpectedIncome())
+//console.log(Bjarke.getCombo())
+//console.log(Bjarke.getMetaroom().getRawPower())

@@ -13,7 +13,7 @@ const ItemlistButton = () =>{
 
     return(
     <div className="linkdivClass">
-        <button> <Link to={"/Itemlist"} className="linkClass">Itemlist</Link></button>
+        <button> <Link to={"/Itemlist"} className="linkClass">Itemlist</Link> </button>
     </div>
     )
 }

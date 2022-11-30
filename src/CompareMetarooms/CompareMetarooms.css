@@ -1,0 +1,46 @@
+.testBody{
+    justify-content: start;
+}
+
+.Header{
+    color: antiquewhite;
+    font-size: 1.5em;
+}
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100vw;
+}
+
+.SubContainer{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.MetaroomStats{
+    width: 10em;
+}
+
+.NewMetaroom{
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+    align-items: center;
+    width: 400em;
+}
+
+.YourMetaroom{
+    display: flex;
+    flex-direction: column;
+    color: antiquewhite;
+    align-items: center;
+    width: 400em;
+}
+
+.itemWrapper{
+    padding: .4em 0 .4em 0;
+}

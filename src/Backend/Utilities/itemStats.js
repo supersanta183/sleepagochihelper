@@ -1,5 +1,5 @@
 //name, type, rarity, level, luck, combo, clean readiness, sleep power
-import { rarities, types } from "./Constants.js"
+import { commonItemNames, rarities, types } from "./Constants.js"
 
 /*
         name: 
@@ -11,19 +11,10 @@ import { rarities, types } from "./Constants.js"
         cleanReadiness: 
         sleepPower: 
 */
+
 export const levelOneItemStats = {
-    Student: {
-        name: "Student",
-        type: types.Setting,
-        rarity: rarities.Common,
-        level: 1,
-        luck: 1.1,
-        combo: 1.02,
-        sleepPower: 0.7,
-        cleanReadiness: 1.1
-    },
     Starter: {
-        name: "Starter",
+        name: commonItemNames.Starter,
         type: types.Setting,
         rarity: rarities.Common,
         level: 1,
@@ -32,8 +23,28 @@ export const levelOneItemStats = {
         cleanReadiness: 1.1,
         sleepPower: 0.6
     },
+    Comfy: {
+        name: commonItemNames.Comfy,
+        type: types.Setting,
+        rarity: rarities.Common,
+        level: 1,
+        luck: 1.1,
+        combo: 1.04,
+        cleanReadiness: 1.1,
+        sleepPower: 0.5
+    },
+    Student: {
+        name: commonItemNames.Student,
+        type: types.Setting,
+        rarity: rarities.Common,
+        level: 1,
+        luck: 1.1,
+        combo: 1.02,
+        sleepPower: 0.7,
+        cleanReadiness: 1.1
+    },
     Shelving: {
-        name: "Shelving",
+        name: commonItemNames.Shelving,
         type: types.Storage,
         rarity: rarities.Common,
         level: 1,
@@ -43,7 +54,7 @@ export const levelOneItemStats = {
         sleepPower: 0.7
     },
     CozyBed: {
-        name: "CozyBed",
+        name: commonItemNames.CozyBed,
         type: types.Bed,
         rarity: rarities.Common,
         level: 1,
@@ -53,7 +64,7 @@ export const levelOneItemStats = {
         sleepPower: 1.1
     },
     PatternRug: {
-        name: "PatternRug",
+        name: commonItemNames.PatternRug,
         type: types.Rug,
         rarity: rarities.Common,
         level: 1,
@@ -63,7 +74,7 @@ export const levelOneItemStats = {
         sleepPower: 0.6
     },
     FramedPlants: {
-        name: "FramedPlants",
+        name: commonItemNames.FramedPlants,
         type: types.Poster,
         rarity: rarities.Common,
         level: 1,
@@ -77,7 +88,7 @@ export const levelOneItemStats = {
 
 export const levelTwoItemStats = {
     Starter: {
-        name: "Starter",
+        name: commonItemNames.Starter,
         type: types.Setting,
         rarity: rarities.Common,
         level: 2,
@@ -86,8 +97,18 @@ export const levelTwoItemStats = {
         cleanReadiness: 1.2,
         sleepPower: 0.8
     },
+    Comfy: {
+        name: commonItemNames.Comfy,
+        type: types.Setting,
+        rarity: rarities.Common,
+        level: 2,
+        luck: 1.2,
+        combo: 1.08,
+        cleanReadiness: 1.2,
+        sleepPower: 0.73
+    },
     WoodenCabinet: {
-        name: "WoodenCabinet",
+        name: commonItemNames.WoodenCabinet,
         type: types.Storage,
         rarity: rarities.Common,
         level: 2,
@@ -97,7 +118,7 @@ export const levelTwoItemStats = {
         sleepPower: 0.8
     },
     RetroRug: {
-        name: "RetroRug",
+        name: commonItemNames.RetroRug,
         type: types.Rug,
         rarity: rarities.Common,
         level: 2,
@@ -107,7 +128,7 @@ export const levelTwoItemStats = {
         sleepPower: 0.67
     },
     Waves: {
-        name: "Waves",
+        name: commonItemNames.Waves,
         type: types.Poster,
         rarity: rarities.Common,
         level: 2,
@@ -119,8 +140,18 @@ export const levelTwoItemStats = {
 }
 
 export const levelThreeItemStats = {
+    Starter: {
+        name: commonItemNames.Starter,
+        type: types.Setting,
+        rarity: rarities.Common,
+        level: 3,
+        luck: 1.3,
+        combo: 1.04,
+        cleanReadiness: 1.3,
+        sleepPower: 1
+    },
     Comfy: {
-        name: "Comfy",
+        name: commonItemNames.Comfy,
         type: types.Setting,
         rarity: rarities.Common,
         level: 3,
@@ -130,7 +161,7 @@ export const levelThreeItemStats = {
         sleepPower: 0.96
     },
     VintageBookshelf: {
-        name: "VintageBookshelf",
+        name: commonItemNames.VintageBookshelf,
         type: types.Storage,
         rarity: rarities.Common,
         level: 3,
@@ -140,7 +171,7 @@ export const levelThreeItemStats = {
         sleepPower: 0.96
     },
     Mattress: {
-        name: "Mattress",
+        name: commonItemNames.Mattress,
         type: types.Bed,
         rarity: rarities.Common,
         level: 3,
@@ -150,7 +181,7 @@ export const levelThreeItemStats = {
         sleepPower: 1.8
     },
     RetroRug:{
-        name: "RetroRug",
+        name: commonItemNames.RetroRug,
         type: types.Rug,
         rarity: rarities.Common,
         level: 3,
@@ -160,7 +191,7 @@ export const levelThreeItemStats = {
         sleepPower: 0.94
     },
     Sunset: {
-        name: "Sunset",
+        name: commonItemNames.Sunset,
         type: types.Poster,
         rarity: rarities.Common,
         level: 3,
@@ -168,5 +199,15 @@ export const levelThreeItemStats = {
         combo: 1.12,
         cleanReadiness: 1.3,
         sleepPower: 0.94
+    },
+    CozyBed: {
+        name: commonItemNames.CozyBed,
+        type: types.Bed,
+        rarity: rarities.Common,
+        level: 3,
+        luck: 1.3,
+        combo: 1.06,
+        cleanReadiness: 1.3,
+        sleepPower: 1.9
     }
 }

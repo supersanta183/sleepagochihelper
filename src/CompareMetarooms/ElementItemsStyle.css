@@ -1,0 +1,85 @@
+
+
+.elementItemWrapper{
+    display: flex;
+    border-radius: 10px;
+    background-color: #040125;
+    border: 2px solid black;
+    height: 7em;
+    justify-content: center;
+    align-items: center;
+}
+
+.levelDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.5em;
+    width: 10em;
+}
+
+.levelClass{
+    font-size: 10px;
+}
+
+.itemButtonClass{
+    width: 1.8em;
+    height: 1.8em;
+    border-radius: .2em;
+    font-size: 15px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.buttonpadding{
+    padding: .5px .5px .5px .5px;
+}
+
+.imgClass{
+    height: 70px;
+}
+
+/* background-image: url("../Images/other/diamond.svg"); */
+
+.statsWrapper{
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: x-small;
+}
+
+.statsRowWrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.statsRow{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2em;
+    color: antiquewhite;
+}
+
+.statsRowElement{
+    padding-left: .4em;
+    padding-right: .4em;
+}
+
+.statsRowElement2{
+    color: gray;
+}
+
+.luckDiv{
+    image-rendering: url("../Images/other/diamond.svg");
+}
+
+.clicked{
+    background-color: #0677A1;
+}
