@@ -1,5 +1,5 @@
 import React from "react";
-import CozyBedlvl1 from "../Images/beds/cozy-bed-lvl1.webp"
+import CozyBedlvl1 from "../Images/beds/cozybed.webp"
 
 const FrontpageImage = () => {
     return (

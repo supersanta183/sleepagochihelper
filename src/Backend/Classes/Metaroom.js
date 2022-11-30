@@ -1,11 +1,11 @@
 //metaroom(1 af hver type item, Raw power, total luck, total combo, total clean readiness)
-import { types } from "../Utilities/Constants.js"
-import { Errors } from "../Utilities/Errors.js"
-import { getItem } from "../Utilities/HelperFunctions.js"
+import types from "../Utilities/Constants.mjs"
+import Errors from "../Utilities/Errors.js"
+import getItem from "../Utilities/HelperFunctions.js"
 import { levelOneItemStats, levelThreeItemStats, levelTwoItemStats } from "../Utilities/itemStats.js"
 
 //metaroom takes 5 items, one of each type.
-export class metaroom{
+class metaroom{
     #setting
     #storage
     #bed
@@ -109,3 +109,4 @@ export class metaroom{
         this.updateMetaroom()
     }
 }
+export default metaroom

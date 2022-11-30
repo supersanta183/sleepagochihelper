@@ -4,7 +4,7 @@ import MetaRoomStats from "./MetaroomStats";
 import NewMetaroom from "./NewMetaroom";
 import { user } from "../Backend/Classes/User.js";
 import { metaroom } from "../Backend/Classes/Metaroom.js";
-import { leagues } from "../Backend/Utilities/Constants.js";
+import { leagues } from "../Backend/Utilities/Constants.mjs";
 
 const SubContainer = (props) =>{
     return(

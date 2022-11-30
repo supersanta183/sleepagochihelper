@@ -1,52 +1,72 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ElementItems } from "./ElementItems";
 import "./Dropdown.css";
-import root from "..";
-import CompareMetarooms from "./ComparemetaroomsContainer";
-import { flushSync } from "react-dom";
 import { levelOneItemStats } from "../Backend/Utilities/itemStats";
 
 const Dropdown = ({ item, options }) => {
     const [showMenu,setShowMenu] = useState(false)
-    const [selectedValue, setSelectedValue] = useState(item.name)
     const [state,setState] = useState(item.name)
+    const inputRef = useRef()
+    const [searchValue, setSearchValue] = useState("")
+    const searchRef = useRef()
 
     useEffect(() => {
-        const handler = () => setShowMenu(false)
+      setSearchValue("")
+      if(showMenu && searchRef.current){
+        searchRef.current.focus()
+      }
+
+        const handler = (e) => {
+          if(inputRef.current && !inputRef.current.contains(e.target)){
+            setShowMenu(false)
+          }
+          
+        }
         window.addEventListener("click",handler)
         return () => {
             window.removeEventListener("click", handler)
         }
-    })
+    }, [showMenu])
+
+    const onSearch = (e) => {
+      setSearchValue(e.target.value)
+    }
+    const getoptions = () => {
+      if(!searchValue){
+        return options
+      }
+      return options.filter((option)=>
+        option.name.toLowerCase().indexOf(searchValue.toLowerCase())>=0)
+    }
 
     const handleInputClick = (e) =>{
+      console.log(e.target)
         if(e.target instanceof HTMLButtonElement){
         }else{
-            e.stopPropagation()
+            //e.stopPropagation()
             setShowMenu(!showMenu)
         }
     }
 
 const isSelected = (option) => {
-    if(!selectedValue){
-        return false
-    }
-    return selectedValue.name === option.name
+    return state === option.name
 }
 
   const onItemClick = (option) =>{
-    console.log(option.name)
-    setSelectedValue(option.name)
     setState(option.name)
   }
 
   return (
     <div className="dropdown-container">
-      <div onClick={handleInputClick} className="dropdown-input">
+      <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
       {showMenu &&(
       <div className="dropdown-menu">
-        {options.map((option) =>(
+      <div className="searchBox">
+        <input placeholder="Search for item..." className="inputfield" onChange={onSearch} value={searchValue} ref={searchRef}></input>
+      </div>
+        {getoptions().map((option) =>(
             <div onClick={() => onItemClick(option)} key={option.name} className={`dropdown-item ${isSelected(option) && "selected"}`}>
+                {console.log(searchValue.toLowerCase())}
                 <ElementItems item={option}/>
             </div>))}
       </div>

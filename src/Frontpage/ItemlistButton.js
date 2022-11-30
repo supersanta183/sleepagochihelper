@@ -1,6 +1,6 @@
 import React from "react";
 import {Routes, Route, useNavigate, Link, redirect} from 'react-router-dom';
-import { metaroom } from "../Backend/Classes/Metaroom.js";
+import metaroom from "../Backend/Classes/Metaroom.js";
 import { levelThreeItemStats } from "../Backend/Utilities/itemStats.js";
 
 const ItemlistButton = () =>{

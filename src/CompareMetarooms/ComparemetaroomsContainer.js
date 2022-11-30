@@ -1,7 +1,7 @@
 import React from "react";
 import { user } from "../Backend/Classes/User.js";
-import { metaroom } from "../Backend/Classes/Metaroom.js";
-import { leagues } from "../Backend/Utilities/Constants.js";
+import metaroom from "../Backend/Classes/Metaroom.js";
+import leagues from "../Backend/Utilities/itemStats.js";
 import Header from "./Header.js";
 import SubContainer from "./SubContainer.js";
 import {Helmet} from "react-helmet"

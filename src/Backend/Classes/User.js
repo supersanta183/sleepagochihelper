@@ -1,11 +1,11 @@
 //User (et metaroom, navn, total power, combo, et id, league, username)
 //metaroom(setting, storage, bed, rug, poster)
 
-import { metaroom } from './Metaroom.js'
-import { leagues } from '../Utilities/Constants.js'
-import { getLeagueBonus } from '../Utilities/HelperFunctions.js'
+import metaroom from './Metaroom.js'
+import leagues from '../Utilities/Constants.mjs'
+import getLeagueBonus from '../Utilities/HelperFunctions.js'
 import { levelOneItemStats, levelThreeItemStats, levelTwoItemStats } from "../Utilities/itemStats.js"
-import { Errors } from '../Utilities/Errors.js'
+import Errors from '../Utilities/Errors.js'
 
 export class user {
     #id = 0

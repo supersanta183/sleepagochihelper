@@ -3,6 +3,7 @@ import "./ElementItemsStyle.css"
 import Starterlvl1 from "../Images/setting/starter-lvl1.webp"
 import { levelOneItemStats, levelTwoItemStats, levelThreeItemStats } from "../Backend/Utilities/itemStats.js";
 import { useState, useEffect } from "react";
+import images from "../images.js"
 
 /*
         name: 
@@ -14,12 +15,13 @@ import { useState, useEffect } from "react";
         cleanReadiness: 
         sleepPower: 
 */
-
 export const ElementItems = (props) =>{
+    console.log(props)
     const [item, setItem] = useState(props.item)
     const [stateButton1,setbutton1] = useState(false)
     const [stateButton2,setbutton2] = useState(false)
     const [stateButton3,setbutton3] = useState(false)
+    const name = props.item.name
 
     function setInitiallyClicked(){
         if(item.level==1){
@@ -68,7 +70,7 @@ export const ElementItems = (props) =>{
             </div>
 
             <div className="imgClasswrapper">
-                <img className="imgClass" src={Starterlvl1} alt="starter" />
+                <img className="imgClass" src={images['name']} alt="starter" />
             </div>
 
             <div className="statsWrapper">
