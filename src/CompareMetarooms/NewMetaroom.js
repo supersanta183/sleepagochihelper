@@ -6,19 +6,19 @@ const NewMetaroom = (props) =>{
         <div className="NewMetaroom">
         <h2>New metaroom</h2>
         <div className="itemWrapper">
-            <ElementItems item={props.metaroom.Setting}/>
+            <ElementItems item={props.metaroom.getSetting()}/>
         </div>
         <div className="itemWrapper">
-            <ElementItems item={props.metaroom.Storage}/>
+            <ElementItems item={props.metaroom.getStorage()}/>
         </div>
         <div className="itemWrapper">
-            <ElementItems item={props.metaroom.Bed}/>
+            <ElementItems item={props.metaroom.getBed()}/>
         </div>
         <div className="itemWrapper">
-            <ElementItems item={props.metaroom.Rug}/>
+            <ElementItems item={props.metaroom.getRug()}/>
         </div>
         <div className="itemWrapper">
-            <ElementItems item={props.metaroom.Poster}/>
+            <ElementItems item={props.metaroom.getPoster()}/>
         </div>
         </div>
     )

@@ -24,8 +24,10 @@ const noUserMetaroom = {
     Rug: noUser.getRug(),
     Poster: noUser.getPoster()
 }
+let x = player.getMetaroom()
+let y = noUser.getMetaroom()
 
-const data = {yourMetaroom,noUserMetaroom}
+const data = {x,y}
 
 
 const CompareMetarooms = () =>{

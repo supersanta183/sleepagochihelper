@@ -35,22 +35,22 @@ export const ElementItems = (props) =>{
         setbutton1(true)
         setbutton2(false)
         setbutton3(false)
-        let name = item.name
-        setItem(levelOneItemStats[name])
+        let names = item.name
+        setItem(levelOneItemStats[names])
     }
     function chooseLevelTwo(){
         setbutton1(false)
         setbutton2(true)
         setbutton3(false)
-        let name = item.name
-        setItem(levelTwoItemStats[name])
+        let names = item.name
+        setItem(levelTwoItemStats[names])
     }
     function chooseLevelThree(){
         setbutton1(false)
         setbutton2(false)
         setbutton3(true)
-        let name = item.name
-        setItem(levelThreeItemStats[name])
+        let names = item.name
+        setItem(levelThreeItemStats[names])
     }
 
     useEffect(() => {
