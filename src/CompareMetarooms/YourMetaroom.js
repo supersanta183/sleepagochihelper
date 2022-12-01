@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
-import { ElementItems } from "./ElementItems";
 import Dropdown from "./Dropdown";
 import { itemNames, types } from "../Backend/Utilities/Constants";
 import { levelOneItemStats } from "../Backend/Utilities/itemStats";
 import { metaroom } from "../Backend/Classes/Metaroom.js";
 import { useState } from "react";
-import { Await, useAsyncValue } from "react-router-dom";
 
 const setting = []
 const storage = []

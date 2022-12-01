@@ -2,7 +2,7 @@
 import BenchPress from "./Images/beds/benchpress.webp"
 import CozyBed from "./Images/beds/cozybed.webp"
 import Futon from "./Images/beds/futon.webp"
-import Kingsbed from "./Images/beds/kingsbed.webp"
+import KingsBed from "./Images/beds/kingsbed.webp"
 import Mattress from "./Images/beds/mattress.webp"
 import OhBear from "./Images/beds/ohbear.webp"
 import TwinSize from "./Images/beds/twinsize.webp"
@@ -34,10 +34,10 @@ import TropicalRug from "./Images/rug/tropical-rug-lvl1.webp"
 import Shelving from "./Images/storage/shelving-lvl1.webp"
 import ChestOfDrawers from "./Images/storage/chest-of-drawers-lvl1.webp"
 import LuckyCupboard from "./Images/storage/lucky-cupboard-lvl1.webp"
-import PullUpBar from "./Images/storage/pull-up-bar-lvl1.webp"
+import PullupBar from "./Images/storage/pull-up-bar-lvl1.webp"
 import VintageTvCabinet from "./Images/storage/vintage-tv-cabinet-lvl1.webp"
 import WoodenCabinet from "./Images/storage/wooden-cabinet-lvl1.webp"
 import VintageBookshelf from "./Images/storage/vintage-bookshelf-lvl1.webp"
 
-export default {BenchPress, CozyBed, Starter, Futon,Kingsbed,Mattress,OhBear,TwinSize,Comfy,Royalty,Student,Traditional,Workout,AfternoonTea,Taipei101,FleurDeLys,FramedPlants,Fujisan,Motivation
-,Sunset,Waves,JoggingTrack,Tatami,PatternRug,RetroRug,SeaWaves,TapisBleuRoyal,TropicalRug,Shelving,ChestOfDrawers,LuckyCupboard,PullUpBar,VintageBookshelf,VintageTvCabinet,WoodenCabinet}
+export default {BenchPress, CozyBed, Starter, Futon,KingsBed,Mattress,OhBear,TwinSize,Comfy,Royalty,Student,Traditional,Workout,AfternoonTea,Taipei101,FleurDeLys,FramedPlants,Fujisan,Motivation
+,Sunset,Waves,JoggingTrack,Tatami,PatternRug,RetroRug,SeaWaves,TapisBleuRoyal,TropicalRug,Shelving,ChestOfDrawers,LuckyCupboard,PullupBar,VintageBookshelf,VintageTvCabinet,WoodenCabinet}

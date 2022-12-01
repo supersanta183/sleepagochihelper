@@ -65,7 +65,7 @@ const isSelected = (option) => {
       </div>
         {getoptions().map((option) =>(
             <div onClick={() => onItemClick(option)} key={option.name} className={`dropdown-item ${isSelected(option) && "selected"}`}>
-                {console.log(searchValue.toLowerCase())}
+                {option.name}
                 <ElementItems item={option}
                   setState={()=>{}}
                 />
