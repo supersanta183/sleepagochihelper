@@ -20,7 +20,11 @@ export const ElementItems = (props) =>{
     const [stateButton1,setbutton1] = useState(false)
     const [stateButton2,setbutton2] = useState(false)
     const [stateButton3,setbutton3] = useState(false)
+    const names = props.item.name
 
+    useEffect(() =>{
+        props.setState(item)
+    },[stateButton1,stateButton2,stateButton3])
     function setInitiallyClicked(){
         if(item.level==1){
             chooseLevelOne()
@@ -30,7 +34,6 @@ export const ElementItems = (props) =>{
             chooseLevelThree()
         }
     }
-
     function chooseLevelOne(){
         setbutton1(true)
         setbutton2(false)
@@ -52,11 +55,9 @@ export const ElementItems = (props) =>{
         let names = item.name
         setItem(levelThreeItemStats[names])
     }
-
     useEffect(() => {
         setInitiallyClicked()
     })
-    const names = props.item.name
 
 
     return (

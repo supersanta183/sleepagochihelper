@@ -10,24 +10,11 @@ import "./CompareMetarooms.css"
 
 let noUser = new user("default", new metaroom(), leagues.TrainingCamp)
 let player = new user("default", new metaroom(), leagues.TrainingCamp)
-let yourMetaroom = {
-    Setting: player.getSetting(),
-    Storage: player.getStorage(),
-    Bed: player.getBed(),
-    Rug: player.getRug(),
-    Poster: player.getPoster()
-}
-const noUserMetaroom = {
-    Setting: noUser.getSetting(),
-    Storage: noUser.getStorage(),
-    Bed: noUser.getBed(),
-    Rug: noUser.getRug(),
-    Poster: noUser.getPoster()
-}
-let x = player.getMetaroom()
-let y = noUser.getMetaroom()
 
-const data = {x,y}
+let yourMetaroom = player.getMetaroom()
+let noUserMetaroom = noUser.getMetaroom()
+
+const data = {yourMetaroom,noUserMetaroom}
 
 
 const CompareMetarooms = () =>{
@@ -38,8 +25,7 @@ const CompareMetarooms = () =>{
             </Helmet>
             <Header/>
             <SubContainer 
-                metaroom = {data}
-            />
+                metaroom = {data}/>
         </div>
     )
 }

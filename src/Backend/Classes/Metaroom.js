@@ -86,6 +86,12 @@ export class metaroom{
     getPoster(){
         return this.#poster
     }
+    getLuck(){
+        return this.#luck
+    }
+    getCleanReadiness(){
+        return this.#cleanReadiness
+    }
 
     updateItem(newItem){
         let newLevel = newItem.level

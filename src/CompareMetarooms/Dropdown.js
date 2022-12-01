@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ElementItems } from "./ElementItems";
 import "./Dropdown.css";
-import { levelOneItemStats } from "../Backend/Utilities/itemStats";
+import { levelOneItemStats, levelTwoItemStats, levelThreeItemStats } from "../Backend/Utilities/itemStats";
 
-const Dropdown = ({ item, options }) => {
+const Dropdown = ({ item, options,setParentItem }) => {
     const [showMenu,setShowMenu] = useState(false)
     const [state,setState] = useState(item.name)
     const inputRef = useRef()
@@ -40,10 +40,8 @@ const Dropdown = ({ item, options }) => {
     }
 
     const handleInputClick = (e) =>{
-      console.log(e.target)
         if(e.target instanceof HTMLButtonElement){
         }else{
-            //e.stopPropagation()
             setShowMenu(!showMenu)
         }
     }
@@ -54,7 +52,8 @@ const isSelected = (option) => {
 
   const onItemClick = (option) =>{
     setState(option.name)
-  }
+    setParentItem(option)
+    }
 
   return (
     <div className="dropdown-container">
@@ -67,12 +66,14 @@ const isSelected = (option) => {
         {getoptions().map((option) =>(
             <div onClick={() => onItemClick(option)} key={option.name} className={`dropdown-item ${isSelected(option) && "selected"}`}>
                 {console.log(searchValue.toLowerCase())}
-                <ElementItems item={option}/>
+                <ElementItems item={option}
+                  setState={()=>{}}
+                />
             </div>))}
       </div>
       )}
         <div className="dropdown-selected-value">
-          <span key={state}> <ElementItems item={levelOneItemStats[state]}/></span> 
+          <span key={state}> <ElementItems item={levelOneItemStats[state]} setState={onItemClick}/></span> 
          </div>
         <div className="dropdown-tools">
           <div className="dropdown-tool">

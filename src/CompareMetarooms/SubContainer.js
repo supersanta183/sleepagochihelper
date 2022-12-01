@@ -8,21 +8,28 @@ import { leagues } from "../Backend/Utilities/Constants.js";
 import { useState } from "react";
 
 const SubContainer = (props) =>{
-    const [yourMetaroom,setYourMetaroom] = useState(props.metaroom.x)
-    const [noUserMetaroom, setNoUserMetaroom] = useState(props.metaroom.y)
+    const [yourMetaroom,setYourMetaroom] = useState(props.metaroom.yourMetaroom)
+    const [noUserMetaroom, setNoUserMetaroom] = useState(props.metaroom.noUserMetaroom)
 
-    const updateYourMetaRoom = async (metaroom) =>{
+    useEffect(() =>{
+        //console.log(yourMetaroom)
+    },[yourMetaroom])
+    const updateYourMetaroom = async (metaroom) =>{
         setYourMetaroom(yourMetaroom=>{
             return metaroom})
     }
-    console.log(yourMetaroom)
+    const updateNoUserMetaroom = async (metaroom) =>{
+        setNoUserMetaroom(noUserMetaroom=>{
+            return metaroom})
+    }
+    const metarooms = {you: yourMetaroom, noUser: noUserMetaroom} 
 
 
     return(
         <div className="SubContainer">
-            <YouMetaroom metaroom={props.metaroom.x} setMetaroom={updateYourMetaRoom}/>
-            <MetaRoomStats/>
-            <NewMetaroom metaroom={props.metaroom.y}/>
+            <YouMetaroom metaroom={props.metaroom.yourMetaroom} setMetaroom={updateYourMetaroom}/>
+            <MetaRoomStats metarooms={metarooms}/>
+            <NewMetaroom metaroom={props.metaroom.noUserMetaroom} setMetaroom={updateNoUserMetaroom}/>
         </div>
         )
 }
