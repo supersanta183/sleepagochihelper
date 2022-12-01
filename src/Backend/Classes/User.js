@@ -2,9 +2,8 @@
 //metaroom(setting, storage, bed, rug, poster)
 
 import { metaroom } from './Metaroom.js'
-import { leagues } from '../Utilities/Constants.js'
 import { getLeagueBonus } from '../Utilities/HelperFunctions.js'
-import { levelOneItemStats, levelThreeItemStats, levelTwoItemStats } from "../Utilities/itemStats.js"
+import { levelOneItemStats } from "../Utilities/itemStats.js"
 import { Errors } from '../Utilities/Errors.js'
 
 export class user {

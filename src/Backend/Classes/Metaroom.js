@@ -2,7 +2,7 @@
 import { types } from "../Utilities/Constants.js"
 import { Errors } from "../Utilities/Errors.js"
 import { getItem } from "../Utilities/HelperFunctions.js"
-import { levelOneItemStats, levelThreeItemStats, levelTwoItemStats } from "../Utilities/itemStats.js"
+import { levelOneItemStats } from "../Utilities/itemStats.js"
 
 //metaroom takes 5 items, one of each type.
 export class metaroom{
@@ -17,7 +17,7 @@ export class metaroom{
     #cleanReadiness
     constructor(setting = levelOneItemStats.Starter, storage= levelOneItemStats.Shelving, 
         bed = levelOneItemStats.CozyBed, rug = levelOneItemStats.PatternRug, poster = levelOneItemStats.FramedPlants){
-        if(setting.type == types.Setting && storage.type == types.Storage && bed.type == types.Bed && rug.type == types.Rug && poster.type == types.Poster){
+        if(setting.type === types.Setting && storage.type === types.Storage && bed.type === types.Bed && rug.type === types.Rug && poster.type === types.Poster){
         this.#setting = setting
         this.#storage = storage
         this.#bed = bed

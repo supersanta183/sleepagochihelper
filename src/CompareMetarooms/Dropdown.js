@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { ElementItems } from "./ElementItems";
 import "./Dropdown.css";
-import { levelOneItemStats, levelTwoItemStats, levelThreeItemStats } from "../Backend/Utilities/itemStats";
+import { levelOneItemStats } from "../Backend/Utilities/itemStats";
 
 const Dropdown = ({ item, options,setParentItem }) => {
     const [showMenu,setShowMenu] = useState(false)

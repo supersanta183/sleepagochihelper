@@ -1,6 +1,5 @@
 import React from "react";
 import "./ElementItemsStyle.css"
-import Starterlvl1 from "../Images/setting/starter-lvl1.webp"
 import { levelOneItemStats, levelTwoItemStats, levelThreeItemStats } from "../Backend/Utilities/itemStats.js";
 import { useState, useEffect } from "react";
 import images from "../images.js"
@@ -26,11 +25,11 @@ export const ElementItems = (props) =>{
         props.setState(item)
     },[stateButton1,stateButton2,stateButton3])
     function setInitiallyClicked(){
-        if(item.level==1){
+        if(item.level === 1){
             chooseLevelOne()
-        }else if(item.level==2){
+        }else if(item.level === 2){
             chooseLevelTwo()
-        }else if(item.level==3){
+        }else if(item.level === 3){
             chooseLevelThree()
         }
     }
@@ -46,14 +45,24 @@ export const ElementItems = (props) =>{
         setbutton2(true)
         setbutton3(false)
         let names = item.name
-        setItem(levelTwoItemStats[names])
+        if(!levelTwoItemStats[names]){
+            setItem(levelOneItemStats[names])
+
+        }else{
+            setItem(levelTwoItemStats[names])
+        }
     }
     function chooseLevelThree(){
         setbutton1(false)
         setbutton2(false)
         setbutton3(true)
         let names = item.name
-        setItem(levelThreeItemStats[names])
+        if(!levelTwoItemStats[names]){
+            setItem(levelOneItemStats[names])
+
+        }else{
+            setItem(levelThreeItemStats[names])
+        }
     }
     useEffect(() => {
         setInitiallyClicked()

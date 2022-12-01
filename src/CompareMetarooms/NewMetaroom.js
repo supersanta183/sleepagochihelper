@@ -40,31 +40,31 @@ const NewMetaroom = (props) =>{
 
     const setParentMetaroom = async (item) =>{
         const type = item.type
-        if(type==types.Setting){
+        if(type===types.Setting){
             setMetaroomSetting(metaroomSetting => ({
                 ...metaroomSetting,
                 ...item
             }))
         }
-        if(type==types.Storage){
+        if(type===types.Storage){
             setMetaroomStorage(metaroomStorage => ({
                 ...metaroomStorage,
                 ...item
             }))
         }
-        if(type == types.Bed){
+        if(type === types.Bed){
             setMetaroomBed(metaroomBed => ({
                 ...metaroomBed,
                 ...item
             }))
         }
-        if(type==types.Rug){
+        if(type === types.Rug){
             setMetaroomRug(metaroomRug => ({
                 ...metaroomRug,
                 ...item
             }))
         }
-        if(type==types.Poster){
+        if(type === types.Poster){
             setMetaroomPoster(metaroomPoster => ({
                 ...metaroomPoster,
                 ...item

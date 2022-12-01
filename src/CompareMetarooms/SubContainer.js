@@ -2,9 +2,6 @@ import React, { useEffect } from "react";
 import YouMetaroom from "./YourMetaroom";
 import MetaRoomStats from "./MetaroomStats";
 import NewMetaroom from "./NewMetaroom";
-import { user } from "../Backend/Classes/User.js";
-import { metaroom } from "../Backend/Classes/Metaroom.js";
-import { leagues } from "../Backend/Utilities/Constants.js";
 import { useState } from "react";
 
 const SubContainer = (props) =>{
@@ -12,7 +9,6 @@ const SubContainer = (props) =>{
     const [noUserMetaroom, setNoUserMetaroom] = useState(props.metaroom.noUserMetaroom)
 
     useEffect(() =>{
-        //console.log(yourMetaroom)
     },[yourMetaroom])
     const updateYourMetaroom = async (metaroom) =>{
         setYourMetaroom(yourMetaroom=>{
