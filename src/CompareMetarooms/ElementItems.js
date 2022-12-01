@@ -3,6 +3,7 @@ import "./ElementItemsStyle.css"
 import { levelOneItemStats, levelTwoItemStats, levelThreeItemStats } from "../Backend/Utilities/itemStats.js";
 import { useState, useEffect } from "react";
 import images from "../images.js"
+import { rarities } from "../Backend/Utilities/Constants";
 
 /*
         name: 
@@ -68,6 +69,12 @@ export const ElementItems = (props) =>{
         setInitiallyClicked()
     })
 
+    const determineType = (rarity) => {
+        if(rarity==item.rarity){
+            return item.rarity
+        }
+    }
+
 
     return (
         <div className="elementItemWrapper">
@@ -113,7 +120,12 @@ export const ElementItems = (props) =>{
                         <div className="statsRow">
                             <div className="statsRowElement">
                                 <div className="statsRowElement2">Rarity</div>
-                                <div className="rarityDiv">{item.rarity}</div>
+                                <div className="rarityDiv">
+                                <span className="common">{determineType(rarities.Common)}</span>
+                                <span className="uncommon">{determineType(rarities.Uncommon)}</span>
+                                <span className="rare">{determineType(rarities.Rare)}</span>
+                                <span className="super">{determineType(rarities.Super)}</span>
+                                </div>
                             </div>
                             <div className="statsRowElement">
                                 <div className="statsRowElement2">Type</div>

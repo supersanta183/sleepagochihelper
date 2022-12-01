@@ -45,7 +45,7 @@
 .imgClasswrapper{
     display: flex;
     height: 10vh;
-    width: 5vw;
+    width: 10vw;
 }
 
 .imgClass{
@@ -102,4 +102,20 @@
 
 .clicked{
     background-color: #0677A1;
+}
+
+.common{
+
+}
+
+.uncommon{
+    color: green;
+}
+
+.rare{
+    color: blue;
+}
+
+.super{
+    color: #800000;
 }
