@@ -72,7 +72,9 @@ export const ElementItems = (props) =>{
     return (
         <div className="elementItemWrapper">
             <div className="levelDiv">
-                <p className="levelClass">Level</p>
+                <div className="leveltitlediv">
+                    Level
+                </div>
                 <div className="buttonpadding"><button className={`itemButtonClass ${stateButton1 ? "clicked" : ""}`} onClick={chooseLevelOne}>1</button></div>
                 <div className="buttonpadding"><button className={`itemButtonClass ${stateButton2 ? "clicked" : ""}`} onClick={chooseLevelTwo}>2</button></div>
                 <div className="buttonpadding"><button className={`itemButtonClass ${stateButton3 ? "clicked" : ""}`} onClick={chooseLevelThree}>3</button></div>
@@ -84,7 +86,9 @@ export const ElementItems = (props) =>{
 
             <div className="statsWrapper">
                 <div>
-                    <h3>{item.name} level {item.level}</h3>
+                    <div className="nameDiv">
+                        <div><h3>{item.name} level {item.level}</h3></div>
+                    </div>
                     <div className="statsRowWrapper">
                         <div className="statsRow">
                             <div className="statsRowElement">

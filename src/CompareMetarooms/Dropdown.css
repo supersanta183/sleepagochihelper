@@ -16,7 +16,7 @@
     border: 1px solid white;
     overflow: auto;
     border-radius: 5px;
-    max-height: 300px;
+    max-height: 35vh;
     background-color: #130829;
     z-index: 1000 !important;
   }

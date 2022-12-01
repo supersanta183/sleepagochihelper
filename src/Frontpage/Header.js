@@ -1,9 +1,10 @@
 import React from "react";
+import "./Frontpage.css"
 
 const Header = () => {
     return (
-        <header className="Header">
-        <h1>
+        <header>
+        <h1 className="Headers">
             Welcome to sleepagotchi helper!
         </h1>
         </header>

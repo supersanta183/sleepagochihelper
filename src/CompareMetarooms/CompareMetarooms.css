@@ -22,7 +22,7 @@
 }
 
 .MetaroomStats{
-    width: 10em;
+    width: 15vw;
 }
 
 .NewMetaroom{
@@ -30,7 +30,7 @@
     flex-direction: column;
     color: antiquewhite;
     align-items: center;
-    width: 400em;
+    width: 40vw;
 }
 
 .YourMetaroom{
@@ -38,9 +38,9 @@
     flex-direction: column;
     color: antiquewhite;
     align-items: center;
-    width: 400em;
+    width: 40vw;
 }
 
 .itemWrapper{
-    padding: .4em 0 .4em 0;
+    padding: .4vh 0 .4vh 0;
 }

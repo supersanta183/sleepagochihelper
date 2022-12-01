@@ -77,7 +77,7 @@ const NewMetaroom = (props) =>{
 
     return (
         <div className="YourMetaroom">
-        <h2>Your metaroom</h2>
+        <h2>New metaroom</h2>
         <div className="itemWrapper">
             <Dropdown item={props.metaroom.getSetting()} options={setting} setParentItem={setParentMetaroom}/>
         </div>
