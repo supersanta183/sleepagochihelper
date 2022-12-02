@@ -27,6 +27,7 @@ const CompareMetarooms = () =>{
             <Header/>
             <SubContainer 
                 metaroom = {data}/>
+            <div className="footer"></div>
         </div>
     )
 }

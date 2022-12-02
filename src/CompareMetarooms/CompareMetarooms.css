@@ -81,7 +81,8 @@
         width: 40%;
         bottom: 0px;
         z-index: 1;
-        background-color: brown;
+        background-color: #0a0325;
+        border: 2px solid black;
     }
     .phonesizewrapper{
         width: 100%;
@@ -103,5 +104,8 @@
         padding: 0 0 0 0;
         height: 70px;
         width: 20vw;
+    }
+    .footer{
+        height: 70px;
     }
 }
