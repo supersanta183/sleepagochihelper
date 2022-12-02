@@ -14,7 +14,7 @@ class FrontpageContainer extends React.Component{
                     <FrontpageImage />
                     <SubHeader />
                     <Button location="./CompareMetarooms" name="Compare Metarooms"/>
-                    <Button location="./Itemlist" name="Itemlist"/>
+                    <Button location="./Flippinghelper" name="Flipping Helper"/>
                 </div>
             </div>
         )   
