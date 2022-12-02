@@ -2,9 +2,8 @@ import React from "react";
 import Header from "./Header.js";
 import FrontpageImage from "./FrontpageImage.js";
 import SubHeader from "./Subheader.js"
-import ItemlistButton from "./ItemlistButton.js";
 import "./Frontpage.css"
-import CompareMetarooms from "./CompareRoomsButton.js";
+import Button from "./Button.js";
 
 class FrontpageContainer extends React.Component{
     render() {
@@ -13,8 +12,8 @@ class FrontpageContainer extends React.Component{
                 <Header />
                 <FrontpageImage />
                 <SubHeader />
-                <CompareMetarooms/>
-                <ItemlistButton/>
+                <Button location="./CompareMetarooms" name="Compare Metarooms"/>
+                <Button location="./Itemlist" name="Itemlist"/>
             </div>
         )   
     }

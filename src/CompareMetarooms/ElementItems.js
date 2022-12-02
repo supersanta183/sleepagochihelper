@@ -80,7 +80,7 @@ export const ElementItems = (props) =>{
         <div className="elementItemWrapper">
             <div className="levelDiv">
                 <div className="leveltitlediv">
-                    Level
+                    <h4>Level</h4>
                 </div>
                 <div className="buttonpadding"><button className={`itemButtonClass ${stateButton1 ? "clicked" : ""}`} onClick={chooseLevelOne}>1</button></div>
                 <div className="buttonpadding"><button className={`itemButtonClass ${stateButton2 ? "clicked" : ""}`} onClick={chooseLevelTwo}>2</button></div>
@@ -92,48 +92,46 @@ export const ElementItems = (props) =>{
             </div>
 
             <div className="statsWrapper">
-                <div>
                     <div className="nameDiv">
-                        <div><h3>{item.name} level {item.level}</h3></div>
+                        <h4>{item.name} level {item.level}</h4>
                     </div>
                     <div className="statsRowWrapper">
                         <div className="statsRow">
                             <div className="statsRowElement">
-                                <div className="statsRowElement2">Luck</div>
-                                <div className="luckDiv">{item.luck}</div>
+                                <div className="statsRowElement2"><h5>Luck</h5></div>
+                                <div className="luckDiv"><p>{item.luck}</p></div>
                             </div>
                             <div className="statsRowElement">
-                                <div className="statsRowElement2">Clean Readiness</div>
-                                <div className="CRDiv">{item.cleanReadiness}</div>
-                            </div>
-                        </div>
-                        <div className="statsRow">
-                            <div className="statsRowElement">
-                                <div className="statsRowElement2">Combo</div>
-                                <div className="comboDiv">{item.combo}</div>
-                            </div>
-                            <div className="statsRowElement">
-                                <div className="statsRowElement2">Sleep Power</div>
-                                <div className="sleepPowerDiv">{item.sleepPower}</div>
+                                <div className="statsRowElement2"><h5>Clean Readiness</h5></div>
+                                <div className="CRDiv"><p>{item.cleanReadiness}</p></div>
                             </div>
                         </div>
                         <div className="statsRow">
                             <div className="statsRowElement">
-                                <div className="statsRowElement2">Rarity</div>
+                                <div className="statsRowElement2"><h5>Combo</h5></div>
+                                <div className="comboDiv"><p>{item.combo}</p></div>
+                            </div>
+                            <div className="statsRowElement">
+                                <div className="statsRowElement2"><h5>Sleep Power</h5></div>
+                                <div className="sleepPowerDiv"><p>{item.sleepPower}</p></div>
+                            </div>
+                        </div>
+                        <div className="statsRow">
+                            <div className="statsRowElement">
+                                <div className="statsRowElement2"><h5>Rarity</h5></div>
                                 <div className="rarityDiv">
-                                <span className="common">{determineType(rarities.Common)}</span>
-                                <span className="uncommon">{determineType(rarities.Uncommon)}</span>
-                                <span className="rare">{determineType(rarities.Rare)}</span>
-                                <span className="super">{determineType(rarities.Super)}</span>
+                                <span className="common"><p>{determineType(rarities.Common)}</p></span>
+                                <span className="uncommon"><p>{determineType(rarities.Uncommon)}</p></span>
+                                <span className="rare"><p>{determineType(rarities.Rare)}</p></span>
+                                <span className="super"><p>{determineType(rarities.Super)}</p></span>
                                 </div>
                             </div>
                             <div className="statsRowElement">
-                                <div className="statsRowElement2">Type</div>
-                                <div className="typeDiv">{item.type}</div>
+                                <div className="statsRowElement2"><h5>Type</h5></div>
+                                <div className="typeDiv"><p>{item.type}</p></div>
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
     )

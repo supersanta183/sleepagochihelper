@@ -24,15 +24,17 @@ const SubContainer = (props) =>{
 
     return(
         <div className="SubContainer">
-        <div className="yourmetaroom">
-            <YouMetaroom metaroom={props.metaroom.yourMetaroom} setMetaroom={updateYourMetaroom}/>
-        </div>
-        <div className="metaroomstats">
-            <MetaRoomStats metarooms={metarooms}/>
-        </div>
-        <div className="newmetaroom">
-            <NewMetaroom metaroom={props.metaroom.noUserMetaroom} setMetaroom={updateNoUserMetaroom}/>
-        </div>
+            <div class="phonesizewrapper">
+                <div className="yourmetaroom">
+                    <YouMetaroom metaroom={props.metaroom.yourMetaroom} setMetaroom={updateYourMetaroom}/>
+                </div>
+                <div className="metaroomstats">
+                    <MetaRoomStats metarooms={metarooms}/>
+                </div>
+            </div>
+            <div className="newmetaroom">
+                <NewMetaroom metaroom={props.metaroom.noUserMetaroom} setMetaroom={updateNoUserMetaroom}/>
+            </div>
         </div>
         )
 }

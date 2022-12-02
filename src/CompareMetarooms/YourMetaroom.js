@@ -4,6 +4,7 @@ import { itemNames, types } from "../Backend/Utilities/Constants";
 import { levelOneItemStats } from "../Backend/Utilities/itemStats";
 import { metaroom } from "../Backend/Classes/Metaroom.js";
 import { useState } from "react";
+import "./MetaroomStats.css";
 
 const setting = []
 const storage = []
@@ -80,7 +81,9 @@ const YouMetaroom = (props) =>{
 
     return (
         <div className="YourMetaroom">
-        <h2>Your metaroom</h2>
+            <div class="subheader">
+                <h2>Your metaroom</h2>
+            </div>
         <div className="itemWrapper">
             <Dropdown item={props.metaroom.getSetting()} options={setting} setParentItem={setParentMetaroom}/>
         </div>

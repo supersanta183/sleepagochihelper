@@ -4,7 +4,10 @@
 
 .Header{
     color: antiquewhite;
-    font-size: 1.5em;
+}
+.subheader{
+    display: flex;
+    justify-content: center;
 }
 
 .Container{
@@ -17,30 +20,87 @@
 
 .SubContainer{
     display: flex;
-    flex-direction: row;
     width: 100%;
 }
 
 .MetaroomStats{
-    width: 15vw;
+    display: flex;
+    width: 15%;
+    height: 100%;
+    min-width: fit-content;
 }
 
-.NewMetaroom{
+.newmetaroom{
     display: flex;
     flex-direction: column;
     color: antiquewhite;
     align-items: center;
-    width: 40vw;
+    width: 40%;
 }
 
-.YourMetaroom{
+.yourmetaroom{
     display: flex;
     flex-direction: column;
     color: antiquewhite;
     align-items: center;
-    width: 40vw;
+    width: 80%;
 }
 
 .itemWrapper{
     padding: .4vh 0 .4vh 0;
+}
+
+.phonesizewrapper{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+}
+
+@media (max-width: 650px){
+    .SubContainer{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .newmetaroom{
+        align-items: flex-end;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 15px;
+    }
+    .yourmetaroom{
+        align-items: flex-end;
+        width: 100%;
+        margin-right: 0;
+        padding-right: 15px;
+    }
+    .MetaroomStats{
+        position: fixed;
+        align-items: flex-end;
+        height: 70px;
+        flex-direction: row;
+        width: 40%;
+        bottom: 0px;
+        z-index: 1;
+        background-color: brown;
+    }
+    .phonesizewrapper{
+        width: 100%;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+    }
+    .elementItemWrapper{
+        min-width: 200px;
+        width: 90vw;
+    }
+    .statsDiv{
+        justify-content: end;
+        padding-bottom: 10px;
+        height: 100%;
+        width: 100%;
+    }
+    .statsWrapper2{
+        padding: 0 0 0 0;
+        height: 70px;
+        width: 20vw;
+    }
 }

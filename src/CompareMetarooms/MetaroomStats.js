@@ -8,7 +8,6 @@ const MetaRoomStats = (props) => {
 
     return (
         <div className="MetaroomStats">
-            <div className="filler"></div>
             <div className="statsWrapper2">
                 <Stats yourData={props.metarooms.you.getCombo().toFixed(2)} 
                     noUserData={props.metarooms.noUser.getCombo().toFixed(2)}
