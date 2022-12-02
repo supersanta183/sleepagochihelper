@@ -4,6 +4,7 @@
     align-items: center;
     z-index: 0;
     margin-top: 3vh;
+    width: 100%;
 }
 .statsDiv{
     display: flex;

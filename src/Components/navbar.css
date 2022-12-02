@@ -82,7 +82,7 @@ li{
     align-items: center;
     justify-content: center;
     border: 1px solid black;
-    height: 7vh;
+    height: 9vh;
     transition: .3s;
 }
 
@@ -92,4 +92,12 @@ li:hover{
 
 h6{
     color: antiquewhite;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }

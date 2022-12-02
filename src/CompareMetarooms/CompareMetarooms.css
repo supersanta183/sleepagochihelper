@@ -78,7 +78,7 @@
         align-items: flex-end;
         height: 70px;
         flex-direction: row;
-        width: 40%;
+        width: 100%;
         bottom: 0px;
         z-index: 1;
         background-color: #210d2c;
@@ -103,7 +103,7 @@
     .statsWrapper2{
         padding: 0 0 0 0;
         height: 70px;
-        width: 20vw;
+        width: 100%;
     }
     .footer{
         height: 70px;
