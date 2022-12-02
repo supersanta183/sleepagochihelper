@@ -52,5 +52,8 @@ p{
 h5{
   font-size: calc(.7rem + .1vw);
 }
+h6{
+  font-size: calc(1rem + 1vw);
+}
 
 

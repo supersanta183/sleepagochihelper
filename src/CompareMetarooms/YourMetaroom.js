@@ -4,7 +4,6 @@ import { itemNames, types } from "../Backend/Utilities/Constants";
 import { levelOneItemStats } from "../Backend/Utilities/itemStats";
 import { metaroom } from "../Backend/Classes/Metaroom.js";
 import { useState } from "react";
-import "./MetaroomStats.css";
 
 const setting = []
 const storage = []
@@ -81,24 +80,24 @@ const YouMetaroom = (props) =>{
 
     return (
         <div className="YourMetaroom">
-            <div class="subheader">
+            <div className="subheader">
                 <h2>Your metaroom</h2>
             </div>
-        <div className="itemWrapper">
-            <Dropdown item={props.metaroom.getSetting()} options={setting} setParentItem={setParentMetaroom}/>
-        </div>
-        <div className="itemWrapper">
-            <Dropdown item={props.metaroom.getStorage()} options={storage} setParentItem={setParentMetaroom}/>
-        </div>
-        <div className="itemWrapper">
-            <Dropdown item={props.metaroom.getBed()} options={bed} setParentItem={setParentMetaroom}/>
-        </div>
-        <div className="itemWrapper">
-            <Dropdown item={props.metaroom.getRug()} options={rug} setParentItem={setParentMetaroom}/>
-        </div>
-        <div className="itemWrapper">
-            <Dropdown item={props.metaroom.getPoster()} options={poster} setParentItem={setParentMetaroom}/>
-        </div>
+            <div className="itemWrapper">
+                <Dropdown item={props.metaroom.getSetting()} options={setting} setParentItem={setParentMetaroom}/>
+            </div>
+            <div className="itemWrapper">
+                <Dropdown item={props.metaroom.getStorage()} options={storage} setParentItem={setParentMetaroom}/>
+            </div>
+            <div className="itemWrapper">
+                <Dropdown item={props.metaroom.getBed()} options={bed} setParentItem={setParentMetaroom}/>
+            </div>
+            <div className="itemWrapper">
+                <Dropdown item={props.metaroom.getRug()} options={rug} setParentItem={setParentMetaroom}/>
+            </div>
+            <div className="itemWrapper">
+                <Dropdown item={props.metaroom.getPoster()} options={poster} setParentItem={setParentMetaroom}/>
+            </div>
         </div>
     )
 }
