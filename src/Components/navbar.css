@@ -1,0 +1,71 @@
+/* --- navbar and burger menu --- */
+nav{
+    width: 100%;
+    height: 3em;
+    background-color: #2D4159;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1em;
+    z-index: 2;
+    position: fixed;
+}
+
+.burger-menu{
+    height: 100%;
+    width: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.burger-bar {
+    width: 2em;
+    height: .2em;
+    background-color: antiquewhite;
+    border-radius: .5em;
+    z-index: 2;
+}
+.menu{
+    width: 50%;
+    height: 100vh;
+    background-color: #210d2c;
+    position: fixed;
+    top: 3em;
+    z-index: 1;
+    border: 2px solid black;
+}
+
+.navbar-wrapper{
+    max-height: 3em;
+}
+
+/* -- sliding menu --- */
+.hidden{
+    display: none;
+
+}
+
+.visible{
+    display: inherit;
+}
+
+/* --- animations --- */
+.burger-bar.clicked:nth-child(1){
+    transform: rotate(45deg) translate(.75em, 0em);
+    transition: ease-out .5s;
+}
+.burger-bar.clicked:nth-child(2){
+    display: none;
+}
+.burger-bar.clicked:nth-child(3){
+    transform: rotate(135deg) translate(-.5em, -0.2em);
+    transition: ease-out .5s;
+}
+
+.burger-bar.unclicked{
+    transform: rotate(0) translate(0);
+    transition: cubic-bezier(0.175,0.885,0.32,1.275) .5s;
+}

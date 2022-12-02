@@ -16,7 +16,7 @@
     border: 1px solid white;
     overflow: auto;
     border-radius: 5px;
-    max-height: 35vh;
+    max-height: 50vh;
     background-color: #130829;
     z-index: 1000 !important;
   }
@@ -26,6 +26,8 @@
   }
   .dropdown-item:hover{
     background-color: #040125;
+    border: 1px solid black;
+    transition: .3s;
   }
 
   .searchBox{
