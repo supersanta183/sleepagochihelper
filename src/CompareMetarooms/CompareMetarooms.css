@@ -94,6 +94,7 @@
     }
     .statsDiv{
         justify-content: end;
+        align-items: flex-start;
         padding-bottom: 10px;
         height: 100%;
         width: 100%;

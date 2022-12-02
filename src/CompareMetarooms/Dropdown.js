@@ -15,7 +15,6 @@ const Dropdown = ({ item, options,setParentItem }) => {
       if(showMenu && searchRef.current){
         searchRef.current.focus()
       }
-
         const handler = (e) => {
           if(inputRef.current && !inputRef.current.contains(e.target)){
             setShowMenu(false)
@@ -60,9 +59,7 @@ const isSelected = (option) => {
       <div ref={inputRef} onClick={handleInputClick} className="dropdown-input">
       {showMenu &&(
       <div className="dropdown-menu">
-      <div className="searchBox">
-        <input placeholder="Search for item..." className="inputfield" onChange={onSearch} value={searchValue} ref={searchRef}></input>
-      </div>
+      
         {getoptions().map((option) =>(
             <div onClick={() => onItemClick(option)} key={option.name} className={`dropdown-item ${isSelected(option) && "selected"}`}>
                 {option.name}
